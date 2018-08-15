@@ -13,12 +13,9 @@ post '/teams' do
   members = params[:team]{:members]
   @heroes = members.collect do |data|
     
+    
  
-  params[:team][:hero].each do |details|
-    Heroes.new(details)
-  end
  
-  @hero = Heroes.all
  
   erb :team
 end
