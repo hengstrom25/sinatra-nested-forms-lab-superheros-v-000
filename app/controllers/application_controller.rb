@@ -11,7 +11,7 @@ end
 post '/teams' do
   @team = Team.new(params[:team][:name], params[:team][:motto])
   members = params[:team][:members]
-  @heroes = members.collect do |data|
+  @heroes = members.collect do |details|
     Heroes.new(data[:name], data[:power], data[:bio])
     end
   erb :team
