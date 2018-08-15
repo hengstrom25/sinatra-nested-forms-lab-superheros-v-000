@@ -15,7 +15,7 @@ post '/teams' do
         Heroes.new(details)
         end
      
-      @superheroes = Heroes.all
+      @hero = Heroes.all
      
       erb :team
 end
