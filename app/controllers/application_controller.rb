@@ -13,6 +13,7 @@ post '/teams' do
   params[:team][:hero].each do |details|
   Superhero.new(details)
     end
+  @superheroes = Heroes.all
   erb :team
 end
 
